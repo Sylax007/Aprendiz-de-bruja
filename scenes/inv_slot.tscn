@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://cprw77lhl30vs"]
+
+[ext_resource type="Texture2D" uid="uid://bpdcxmvp4c3y3" path="res://assets/Tiny Wonder UI Free/base free.png" id="1_gvx5b"]
+[ext_resource type="Script" uid="uid://cv05mu4w37iue" path="res://scripts/slot.gd" id="2_oyh1m"]
+[ext_resource type="FontFile" uid="uid://w2drba428v6g" path="res://assets/fonts/Victorian.otf" id="3_oyh1m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qi3r"]
+size = Vector2(18, 18)
+
+[node name="inv_slot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -640.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slot" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("2_oyh1m")
+
+[node name="Sprite2D" type="Sprite2D" parent="slot"]
+texture = ExtResource("1_gvx5b")
+region_enabled = true
+region_rect = Rect2(107, 107, 26, 26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slot"]
+shape = SubResource("RectangleShape2D_4qi3r")
+
+[node name="name" type="Label" parent="slot"]
+offset_left = -34.0
+offset_top = 13.0
+offset_right = 136.0
+offset_bottom = 47.0
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 6
+size_flags_vertical = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_oyh1m")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="number" type="Label" parent="slot"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -1.0
+offset_right = 55.0
+offset_bottom = 33.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 2
+text_overrun_behavior = 3
+
+[connection signal="area_entered" from="slot" to="slot" method="_on_area_entered"]
+[connection signal="area_shape_entered" from="slot" to="slot" method="_on_area_shape_entered"]
+[connection signal="area_shape_exited" from="slot" to="slot" method="_on_area_shape_exited"]

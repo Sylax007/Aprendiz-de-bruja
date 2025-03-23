@@ -1,0 +1,130 @@
+[gd_scene load_steps=12 format=3 uid="uid://cftob0np1ms2c"]
+
+[ext_resource type="Script" uid="uid://xxwhg1tui34n" path="res://scripts/menu.gd" id="1_dtuhg"]
+[ext_resource type="Texture2D" uid="uid://c77xanl7nbutf" path="res://assets/menú fondo/sprite1.png" id="2_twd7t"]
+[ext_resource type="Texture2D" uid="uid://bwiochedlnq5t" path="res://assets/menú fondo/sprite2.png" id="3_8grug"]
+[ext_resource type="Texture2D" uid="uid://cvkqli6utf76t" path="res://assets/menú fondo/Botones/Status.png" id="4_skwth"]
+[ext_resource type="Texture2D" uid="uid://cdd31r20isior" path="res://assets/menú fondo/Botones/Orders.png" id="5_miux1"]
+[ext_resource type="Texture2D" uid="uid://d6uwej5ah2uc" path="res://assets/menú fondo/Botones/Collecting.png" id="6_rjc25"]
+[ext_resource type="Texture2D" uid="uid://djhw4stxyrfau" path="res://assets/menú fondo/Botones/Recipes.png" id="7_daawa"]
+[ext_resource type="Texture2D" uid="uid://btcmjevirsioj" path="res://assets/menú fondo/Botones/Shop.png" id="8_wrdnl"]
+[ext_resource type="Texture2D" uid="uid://4uttyy1d61i8" path="res://assets/menú fondo/Botones/Close game.png" id="9_v0uir"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_mxgkd"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("2_twd7t")
+frame_1/texture = ExtResource("3_8grug")
+frame_1/duration = 1.0
+
+[sub_resource type="SystemFont" id="SystemFont_7bbuq"]
+font_names = PackedStringArray("Sans-Serif")
+font_weight = 975
+subpixel_positioning = 0
+
+[node name="Main-menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_dtuhg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AnimatedTexture_mxgkd")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="separator" type="Control" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 2
+
+[node name="status" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+keep_pressed_outside = true
+icon = ExtResource("4_skwth")
+
+[node name="orders" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+icon = ExtResource("5_miux1")
+
+[node name="collecting" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+icon = ExtResource("6_rjc25")
+
+[node name="recipes" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+icon = ExtResource("7_daawa")
+
+[node name="shop" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+icon = ExtResource("8_wrdnl")
+
+[node name="quit" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+icon = ExtResource("9_v0uir")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/separation = 60
+
+[node name="separator" type="Control" parent="MarginContainer/BoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/BoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_7bbuq")
+theme_override_font_sizes/font_size = 19
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="separator3" type="Control" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="separator4" type="Control" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/status" to="." method="_on_status_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/orders" to="." method="_on_orders_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/collecting" to="." method="_on_collecting_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/recipes" to="." method="_on_recipes_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

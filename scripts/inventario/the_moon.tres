@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://d11310cpdknwl"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_ybtp2"]
+[ext_resource type="Texture2D" uid="uid://5cce6nxk41mj" path="res://assets/BackgroundsForYourGamePack_01/FullMoon.png" id="2_mwx2w"]
+
+[resource]
+script = ExtResource("1_ybtp2")
+texture = ExtResource("2_mwx2w")
+name = "The Moon"
+quantity = 1
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

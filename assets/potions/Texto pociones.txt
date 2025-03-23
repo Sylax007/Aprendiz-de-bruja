@@ -1,0 +1,80 @@
+Aquí pongo la info de las pociones, todos los textos están alineados en el centro.
+También añado los ingredientes que necesitan + la cantidad de cada.
+
+(Recuerda usar una tipografía algo más simple para que sea lo más fácil de leer que se
+pueda, en esta info + en las misiones hay que usar esa tipografía, luego en el resto
+puedes usar la misma tipografía decorativa que usaste con los ingredientes.)
+
+
+
+Healing potion
+
+A bitter potion that heals minor 
+wounds, however, it does 
+not restore fatigue.
+
+1 clover + 2 green dropplet
+
+
+Sleeping kiss
+
+This potion produces deep
+drowsiness. Especially useful
+for those who suffer from
+insomnia or need to recover
+from fatigue.
+
+3 Daisy + 2 phantom cloth
+
+
+Love me potion
+
+This potion connects the two
+people who take it in a deep 
+feeling of love. 
+The effect is momentary. 
+Overdoses are dangerous.
+
+2 Creepy eyes + 2 red dropplets
+
+
+Focusing water
+
+This potion helps to enter a
+state of hyperfocus, it can 
+be dangerous if the person 
+has any type of fatigue.
+
+3 summer cloud + 3 blue dropplets
+
+
+Confident push
+
+This potion is especially useful
+for those who are shy, or
+particularly reserved, to show
+what they truly feel or think.
+
+3 orange dropplets + 2 poppy
+
+
+Memory of sacrifice
+
+This forbidden formula sacrifices 
+life or memory in exchange for 
+power. Even if used for the 
+greater good, whoever uses it 
+will pay a huge price.
+
+3 purple dropplets + 3 forbidden meat + 3 mandrake
+
+
+Sacred tears
+
+They say an angel, moved by
+the kindness of a human, offered 
+its bottled tears to grant her 
+a wish. It dispels any curse 
+or black magic.
+
+5 yellow dropplets + 5 bottled soul + 5 lucky clover

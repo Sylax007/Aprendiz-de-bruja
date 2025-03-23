@@ -1,0 +1,360 @@
+[gd_scene load_steps=20 format=3 uid="uid://gjgvr1np8nua"]
+
+[ext_resource type="Texture2D" uid="uid://deodw8340l77l" path="res://assets/Recipes.png" id="1_53g1v"]
+[ext_resource type="PackedScene" uid="uid://b1wusmlkyhwia" path="res://scenes/inv_ui.tscn" id="1_hj2ta"]
+[ext_resource type="Texture2D" uid="uid://75srerfht7t0" path="res://assets/potions/1. Healing potion.png" id="2_uae8j"]
+[ext_resource type="FontFile" uid="uid://w2drba428v6g" path="res://assets/fonts/Victorian.otf" id="2_yyk2a"]
+[ext_resource type="FontFile" uid="uid://bubkqg1s5webm" path="res://assets/fonts/Aladin-Regular.ttf" id="3_s887n"]
+[ext_resource type="Texture2D" uid="uid://c4kiqsya0kf8" path="res://assets/potions/2. Sleeping kiss.png" id="4_fiysm"]
+[ext_resource type="Texture2D" uid="uid://b3ya23y7popd3" path="res://assets/potions/3. Love me potion.png" id="5_brsb2"]
+[ext_resource type="Texture2D" uid="uid://cgrjy5ejt71ay" path="res://assets/potions/4. Focusing water.png" id="6_nq6oc"]
+[ext_resource type="PackedScene" uid="uid://cprw77lhl30vs" path="res://scenes/inv_slot.tscn" id="7_0df5h"]
+[ext_resource type="Texture2D" uid="uid://cmgda7ax40ang" path="res://assets/potions/5. Confidence push.png" id="7_k86sa"]
+[ext_resource type="Texture2D" uid="uid://cxjk6l0d77ru7" path="res://assets/potions/6. Memory of sacrifice.png" id="8_40feg"]
+[ext_resource type="Texture2D" uid="uid://cdv0yyiyetoim" path="res://assets/potions/7. Sacred tears.png" id="9_tla8l"]
+[ext_resource type="Texture2D" uid="uid://17nxdruhj8a1" path="res://assets/potions/1. Healing potion(big).png" id="11_w24ly"]
+[ext_resource type="Texture2D" uid="uid://bxx1in3ysrmvf" path="res://assets/menú fondo/Botones/Craft.png" id="13_ohgsq"]
+
+[sub_resource type="Theme" id="Theme_j8d85"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5mlvw"]
+
+[sub_resource type="Gradient" id="Gradient_yyk2a"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uae8j"]
+gradient = SubResource("Gradient_yyk2a")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyk2a"]
+bg_color = Color(0, 0, 0, 0.388235)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_53g1v")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 22
+alignment = 2
+
+[node name="separator6" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="separator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 17)
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 320)
+layout_mode = 2
+theme = SubResource("Theme_j8d85")
+theme_override_colors/guide_color = Color(1, 0.965, 0.86, 0)
+theme_override_colors/font_hovered_color = Color(0.74052, 0.6336, 0.99, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/v_separation = 12
+theme_override_constants/icon_margin = 10
+theme_override_fonts/font = ExtResource("3_s887n")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/panel = SubResource("StyleBoxTexture_5mlvw")
+allow_reselect = true
+item_count = 7
+item_0/text = "1. Healing potion"
+item_0/icon = ExtResource("2_uae8j")
+item_1/text = "2. Sleeping kiss"
+item_1/icon = ExtResource("4_fiysm")
+item_2/text = "3. Love me potion"
+item_2/icon = ExtResource("5_brsb2")
+item_3/text = "4. Focusing water"
+item_3/icon = ExtResource("6_nq6oc")
+item_4/text = "5. Confidence push"
+item_4/icon = ExtResource("7_k86sa")
+item_5/text = "6. Memory of sacrifice"
+item_5/icon = ExtResource("8_40feg")
+item_6/text = "7. Sacred tears"
+item_6/icon = ExtResource("9_tla8l")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="separator" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="separator3" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 19)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_uae8j")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s887n")
+text = "Healing potion"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_uae8j")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Healing potion"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("2_uae8j")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Healing potion"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("2_uae8j")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Healing potion"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("2_uae8j")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+text = "Healing potion"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+texture = ExtResource("2_uae8j")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "Healing potion"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+texture = ExtResource("2_uae8j")
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+text = "Healing potion"
+
+[node name="separator5" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator6" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator7" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator11" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator12" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator13" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator14" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator15" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator16" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 16
+
+[node name="Crafting_table" type="NinePatchRect" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(180, 350)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = SubResource("GradientTexture2D_uae8j")
+region_rect = Rect2(107, 11.5, 26, 25)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_right = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="separator11" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_yyk2a")
+theme_override_font_sizes/font_size = 28
+text = "Crafting"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture = ExtResource("11_w24ly")
+stretch_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer"]
+custom_minimum_size = Vector2(170, 100)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = ExtResource("3_s887n")
+theme_override_font_sizes/normal_font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_yyk2a")
+text = "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed, independently of the copy that will subsequently populate it, or to demonstrate various fonts of a typeface without meaningful text that could be distracting."
+
+[node name="separator10" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 45
+columns = 2
+
+[node name="inv_slot" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer/GridContainer" instance=ExtResource("7_0df5h")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="inv_slot2" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer/GridContainer" instance=ExtResource("7_0df5h")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="separator6" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_yyk2a")
+icon = ExtResource("13_ohgsq")
+
+[node name="separator2" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer/Crafting_table/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="separator" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="separator2" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Inv_UI" parent="MarginContainer/HBoxContainer/HBoxContainer" instance=ExtResource("1_hj2ta")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="separator3" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="separator4" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
