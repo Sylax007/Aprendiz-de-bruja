@@ -18,13 +18,14 @@ font_weight = 975
 subpixel_positioning = 0
 
 [node name="Main-menu" type="Control"]
+layout_direction = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 2
 size_flags_vertical = 4
 script = ExtResource("1_oa1go")
 
@@ -51,6 +52,7 @@ theme_override_constants/margin_bottom = 12
 
 [node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_constants/separation = 20
 
 [node name="separator" type="Control" parent="MarginContainer/BoxContainer"]
@@ -111,8 +113,8 @@ layout_mode = 2
 [node name="separator4" type="Control" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
 
-[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/new game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/new game" to="." method="_on_status_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/new game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/continue" to="." method="_on_orders_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/load game" to="." method="_on_load_game_pressed"]

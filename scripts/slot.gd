@@ -1,14 +1,18 @@
 extends Area2D
 
+class_name Slot_scene
+
 @onready var is_clicked = false
 @onready var has_mouse_entered = false
+@onready var sprite = $TextureRect
+@onready var name_label = $name
+@onready var quantity_label = $number
+
 var is_inside_slot = false
 var draggable = true
 var body_ref
 var offset: Vector2
 
-#func _ready():
-	
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("click") and not global.is_dragging:
@@ -18,7 +22,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("click") and global.has_shape_entered:
 		global.is_being_assigned = true
 		
-
 
 
 func transfer(callback):
@@ -35,6 +38,7 @@ func _on_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, l
 	if global.is_dragging:
 		global.has_shape_entered = null
 		$Sprite2D.scale = Vector2(1, 1)
+
 
 func _on_mouse_entered() -> void:
 	if not global.is_dragging:
@@ -55,5 +59,5 @@ func _input(event):
 		is_clicked = false
 	elif event.is_action_released("click") and not is_inside_slot:
 		is_clicked = false
-		#global.drop_item(item)
+		
 		

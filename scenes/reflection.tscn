@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq7ge8m3bmh46"]
+
+[ext_resource type="Script" uid="uid://rxlyr05jo30g" path="res://scripts/reflection.gd" id="1_vwh27"]
+[ext_resource type="Texture2D" uid="uid://bysxie6w8isrs" path="res://assets/others/water.png" id="2_k4sl6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vwh27"]
+radius = 16.0
+
+[node name="Area2D" type="Area2D"]
+z_index = 2
+script = ExtResource("1_vwh27")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -1.19209e-07)
+scale = Vector2(0.0444444, 0.0888889)
+texture = ExtResource("2_k4sl6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vwh27")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

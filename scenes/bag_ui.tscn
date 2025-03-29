@@ -1,0 +1,130 @@
+[gd_scene load_steps=23 format=3 uid="uid://b1wusmlkyhwia"]
+
+[ext_resource type="Script" uid="uid://s2niukkvsuvk" path="res://scripts/inv_ui.gd" id="1_4wrg3"]
+[ext_resource type="FontFile" uid="uid://w2drba428v6g" path="res://assets/fonts/Victorian.otf" id="2_23blq"]
+[ext_resource type="FontFile" uid="uid://bubkqg1s5webm" path="res://assets/fonts/Aladin-Regular.ttf" id="3_1vrcm"]
+[ext_resource type="Texture2D" uid="uid://b1kfkksvqooxe" path="res://assets/ingredient list/1.Clover.png" id="4_s5fwl"]
+[ext_resource type="Texture2D" uid="uid://p3w6oqcu8sgi" path="res://assets/ingredient list/2.Daisy.png" id="5_s2p32"]
+[ext_resource type="Texture2D" uid="uid://cyx8rqeg0jysm" path="res://assets/ingredient list/3.Summer cloud.png" id="6_piv74"]
+[ext_resource type="Texture2D" uid="uid://c3qblr7l7squk" path="res://assets/ingredient list/4.Poppy.png" id="7_o5nxb"]
+[ext_resource type="Texture2D" uid="uid://urhafc1qkngv" path="res://assets/ingredient list/5.Lucky clover.png" id="8_wqkhw"]
+[ext_resource type="Texture2D" uid="uid://d3lbmgtg0sbc" path="res://assets/ingredient list/6.Mandrake.png" id="9_8xfnm"]
+[ext_resource type="Texture2D" uid="uid://bj3e3t6bb4mnv" path="res://assets/ingredient list/7.Green droplet.png" id="10_3exs6"]
+[ext_resource type="Texture2D" uid="uid://c5fgrb6rt144o" path="res://assets/ingredient list/8.Orange droplet.png" id="11_to33s"]
+[ext_resource type="Texture2D" uid="uid://c5nsleyruhb2i" path="res://assets/ingredient list/9.Red droplet.png" id="12_luom1"]
+[ext_resource type="Texture2D" uid="uid://b3riwohu2yxcp" path="res://assets/ingredient list/10.Blue droplet.png" id="13_8jkn0"]
+[ext_resource type="Texture2D" uid="uid://dcglwmjd7nnng" path="res://assets/ingredient list/11.Yellow droplet.png" id="14_w3jas"]
+[ext_resource type="Texture2D" uid="uid://dij67blowkasd" path="res://assets/ingredient list/12.Purple droplet.png" id="15_lv3tq"]
+[ext_resource type="Texture2D" uid="uid://h1b7124dwgh2" path="res://assets/ingredient list/13.Creepy eye.png" id="16_vr47u"]
+[ext_resource type="Texture2D" uid="uid://c4xb33nubf3aa" path="res://assets/ingredient list/14.Phantom cloth.png" id="17_6bhqv"]
+[ext_resource type="Texture2D" uid="uid://dddelrhhgises" path="res://assets/ingredient list/15.Forbidden meat.png" id="18_tlu0w"]
+[ext_resource type="Texture2D" uid="uid://blrnvnbkub7jp" path="res://assets/ingredient list/16. Bottled soul.png" id="19_eq6mc"]
+
+[sub_resource type="Gradient" id="Gradient_wefod"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2tqa5"]
+gradient = SubResource("Gradient_wefod")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cr8l"]
+
+[node name="NinePatchRect" type="NinePatchRect"]
+custom_minimum_size = Vector2(120, 280)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -140.0
+offset_right = 64.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = SubResource("GradientTexture2D_2tqa5")
+region_rect = Rect2(107, 11.5, 26, 25)
+script = ExtResource("1_4wrg3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -149.0
+offset_right = 80.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_23blq")
+theme_override_font_sizes/font_size = 24
+text = "Bag"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer"]
+custom_minimum_size = Vector2(160, 250)
+layout_mode = 2
+theme_override_colors/guide_color = Color(1, 0.965, 0.86, 0)
+theme_override_colors/font_hovered_color = Color(0.74052, 0.6336, 0.99, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/v_separation = 24
+theme_override_constants/icon_margin = 10
+theme_override_fonts/font = ExtResource("3_1vrcm")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/panel = SubResource("StyleBoxTexture_2cr8l")
+select_mode = 1
+allow_reselect = true
+allow_rmb_select = true
+allow_search = false
+auto_width = true
+item_count = 16
+item_0/text = "Clover"
+item_0/icon = ExtResource("4_s5fwl")
+item_1/text = "Daisy"
+item_1/icon = ExtResource("5_s2p32")
+item_2/text = "Summer cloud"
+item_2/icon = ExtResource("6_piv74")
+item_3/text = "Poppy"
+item_3/icon = ExtResource("7_o5nxb")
+item_4/text = "Lucky clover"
+item_4/icon = ExtResource("8_wqkhw")
+item_5/text = "Mandrake"
+item_5/icon = ExtResource("9_8xfnm")
+item_6/text = "Green droplet"
+item_6/icon = ExtResource("10_3exs6")
+item_7/text = "Orange droplet"
+item_7/icon = ExtResource("11_to33s")
+item_8/text = "Red droplet"
+item_8/icon = ExtResource("12_luom1")
+item_9/text = "Blue droplet"
+item_9/icon = ExtResource("13_8jkn0")
+item_10/text = "Purple droplet"
+item_10/icon = ExtResource("15_lv3tq")
+item_11/text = "Yellow droplet"
+item_11/icon = ExtResource("14_w3jas")
+item_12/text = "Creepy eye"
+item_12/icon = ExtResource("16_vr47u")
+item_13/text = "Phantom cloth"
+item_13/icon = ExtResource("17_6bhqv")
+item_14/text = "Forbidden meat"
+item_14/icon = ExtResource("18_tlu0w")
+item_15/text = "Bottled soul"
+item_15/icon = ExtResource("19_eq6mc")
+
+[node name="separator" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[connection signal="draw" from="." to="." method="_on_draw" flags=6]

@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7gh21e3436cc"]
-
-[ext_resource type="Texture2D" uid="uid://dumv3hio5j8o0" path="res://assets/Tiny Wonder UI Free/bars free.png" id="1_h8cwt"]
-
-[node name="BarsFree" type="Sprite2D"]
-texture = ExtResource("1_h8cwt")
-region_enabled = true
-region_rect = Rect2(0, 52.4542, 48, 5.93534)

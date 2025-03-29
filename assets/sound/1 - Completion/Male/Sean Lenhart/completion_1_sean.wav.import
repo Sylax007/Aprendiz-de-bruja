@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqtq48iavgn5b"
+path="res://.godot/imported/completion_1_sean.wav-9dcad75e0dfa60c6b471562bf1f44e3a.sample"
+
+[deps]
+
+source_file="res://assets/sound/1 - Completion/Male/Sean Lenhart/completion_1_sean.wav"
+dest_files=["res://.godot/imported/completion_1_sean.wav-9dcad75e0dfa60c6b471562bf1f44e3a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

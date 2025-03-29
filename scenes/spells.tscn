@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bskeokgpurg80"]
+[gd_scene load_steps=15 format=3 uid="uid://bskeokgpurg80"]
 
 [ext_resource type="Script" uid="uid://cuau7a5jqc4qu" path="res://scripts/spells.gd" id="1_wovxd"]
 [ext_resource type="Texture2D" uid="uid://dl2ue63v11jim" path="res://assets/bullet/Dark magic.png" id="2_0ci4s"]
@@ -7,14 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bvjg3prrm6t7f" path="res://assets/bullet/ataques/003.png" id="4_vx7i6"]
 [ext_resource type="Texture2D" uid="uid://c567my8kspq37" path="res://assets/bullet/ataques/004.png" id="5_23p71"]
 [ext_resource type="Texture2D" uid="uid://c2uijqq3p6k44" path="res://assets/bullet/ataques/005.png" id="6_ush4g"]
-[ext_resource type="Texture2D" uid="uid://bpisjsleonkp8" path="res://assets/bullet/ataques/006.png" id="7_omvl3"]
-[ext_resource type="Texture2D" uid="uid://c7tq5jmhxk36a" path="res://assets/bullet/ataques/007.png" id="8_gsb8h"]
-[ext_resource type="Texture2D" uid="uid://dsbxwpoeojqaq" path="res://assets/bullet/ataques/008.png" id="9_d3t6h"]
-[ext_resource type="Texture2D" uid="uid://iq22n7ajcaaw" path="res://assets/bullet/ataques/009.png" id="10_577ai"]
-[ext_resource type="Texture2D" uid="uid://d4eh1ltcwe1yd" path="res://assets/bullet/ataques/010.png" id="11_eosvq"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_so0rm"]
-frames = 10
+frames = 5
 speed_scale = 10.0
 frame_0/texture = ExtResource("2_64m08")
 frame_1/texture = ExtResource("3_0ci4s")
@@ -25,19 +20,9 @@ frame_3/texture = ExtResource("5_23p71")
 frame_3/duration = 1.0
 frame_4/texture = ExtResource("6_ush4g")
 frame_4/duration = 1.0
-frame_5/texture = ExtResource("7_omvl3")
-frame_5/duration = 1.0
-frame_6/texture = ExtResource("8_gsb8h")
-frame_6/duration = 1.0
-frame_7/texture = ExtResource("9_d3t6h")
-frame_7/duration = 1.0
-frame_8/texture = ExtResource("10_577ai")
-frame_8/duration = 1.0
-frame_9/texture = ExtResource("11_eosvq")
-frame_9/duration = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s6wkp"]
-radius = 16.0
+radius = 12.0
 
 [sub_resource type="Animation" id="Animation_23p71"]
 length = 0.001
@@ -88,13 +73,14 @@ _data = {
 
 [node name="bullet" type="CharacterBody2D"]
 collision_layer = 16
-collision_mask = 34
+collision_mask = 32
 script = ExtResource("1_wovxd")
 speed = Vector2(280, 100)
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-scale = Vector2(0.511, 0.5)
+scale = Vector2(0.5, 0.5)
 texture = SubResource("AnimatedTexture_so0rm")
+offset = Vector2(-6, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_s6wkp")
