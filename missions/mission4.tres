@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Mission" load_steps=2 format=3 uid="uid://b5y6ihg4ekm7r"]
+
+[ext_resource type="Script" uid="uid://dufeh883c2h5r" path="res://scripts/mission_res.gd" id="1_wki83"]
+
+[resource]
+script = ExtResource("1_wki83")
+name = "Focusing water"
+description = "Collect 3 summer cloud and 3 blue droplets"
+reward = 900
+metadata/_custom_type_script = "uid://dufeh883c2h5r"

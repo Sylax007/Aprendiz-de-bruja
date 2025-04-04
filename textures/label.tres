@@ -1,0 +1,34 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b0by4h20qxjrr"]
+
+[ext_resource type="FontFile" uid="uid://bubkqg1s5webm" path="res://assets/fonts/Aladin-Regular.ttf" id="1_hxyca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vm6y1"]
+bg_color = Color(0, 0, 0, 0.333333)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lb6gq"]
+bg_color = Color(0, 0, 0, 0.333333)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fb71o"]
+bg_color = Color(0.17, 0.071485, 0.0663, 0.231373)
+
+[resource]
+default_font = ExtResource("1_hxyca")
+Button/constants/outline_size = 4
+ItemList/colors/font_color = Color(1, 1, 1, 1)
+ItemList/constants/outline_size = 3
+ItemList/styles/panel = SubResource("StyleBoxFlat_vm6y1")
+Label/constants/outline_size = 4
+Label/fonts/font = ExtResource("1_hxyca")
+Panel/styles/panel = SubResource("StyleBoxFlat_lb6gq")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/constants/outline_size = 4
+RichTextLabel/font_sizes/normal_font_size = 12
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_fb71o")

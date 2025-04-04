@@ -3,12 +3,11 @@ extends BoxContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var menu = global.preloads.main_menu.instantiate()
-	menu.scale = Vector2(0.3,0.3)
-	add_child(menu)
-	menu.global_position = Vector2.ZERO
-	
 	self.scale = Vector2(1,1) / get_parent().zoom.x
+	#var menu = global.preloads.main_menu.instantiate()
+	#menu.scale = Vector2(0.3,0.3)
+	#add_child(menu)
+	#menu.global_position = Vector2.ZERO
 	#add_child(global.preloads.main_menu)
 	
 

@@ -71,7 +71,7 @@ func _on_body_entered(body: Node2D) -> void:
 	var node = get_node(body.get_path())
 	if node is Player_scene:
 		node.player_inventory.items[label.text.to_lower()].quantity += int(quantity.text)
-		var this_player = get_node(body.get_path()).player_inventory.items[label.text.to_lower()]
-		print(this_player.name," quantity is: ",this_player.quantity)
+		var this_player = node.player_inventory.items[label.text.to_lower()]
+		#print(this_player.name," quantity is: ",this_player.quantity)
 		queue_free()
 	

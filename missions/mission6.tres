@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Mission" load_steps=2 format=3 uid="uid://pd1bfr75fa3c"]
+
+[ext_resource type="Script" uid="uid://dufeh883c2h5r" path="res://scripts/mission_res.gd" id="1_45ce6"]
+
+[resource]
+script = ExtResource("1_45ce6")
+name = "Memory of sacrifice"
+description = "Collect 3 purple droplets 3 forbidden meat and 3 mandrakes"
+reward = 3000
+metadata/_custom_type_script = "uid://dufeh883c2h5r"

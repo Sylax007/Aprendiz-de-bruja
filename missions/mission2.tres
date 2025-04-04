@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Mission" load_steps=2 format=3 uid="uid://djys026nv7vf2"]
+
+[ext_resource type="Script" uid="uid://dufeh883c2h5r" path="res://scripts/mission_res.gd" id="1_f0u47"]
+
+[resource]
+script = ExtResource("1_f0u47")
+name = "Sleeping kiss"
+description = "Collect 3 daisies and 2 phantom cloths"
+reward = 300
+metadata/_custom_type_script = "uid://dufeh883c2h5r"

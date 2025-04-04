@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=6 format=3 uid="uid://c4vlqt3w8doau"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_g4p82"]
+[ext_resource type="Texture2D" uid="uid://cxjk6l0d77ru7" path="res://assets/potions/6. Memory of sacrifice.png" id="2_16arx"]
+[ext_resource type="Resource" uid="uid://cllsvwlybrvbr" path="res://Items/Purple_droplet.tres" id="2_a5acy"]
+[ext_resource type="Resource" uid="uid://cfmv87w1pjerb" path="res://Items/Forbidden_meat.tres" id="3_nygt7"]
+[ext_resource type="Resource" uid="uid://crwr0a7juh6iy" path="res://Items/Mandrake.tres" id="4_gnciu"]
+
+[resource]
+script = ExtResource("1_g4p82")
+texture = ExtResource("2_16arx")
+drinkable = false
+spell = false
+name = "Memory of sacrifice"
+quantity = 0
+price = 750
+damage = 0
+cooldown = 0.0
+temperature = 0
+speed = 0
+duration = 0.0
+types = Dictionary[String, float]({})
+description = "This forbidden formula sacrifices life or memory in exchange for power. Even if used for the greater good, whoever uses it will pay a huge price."
+recipe = Dictionary[ExtResource("1_g4p82"), int]({
+ExtResource("2_a5acy"): 3,
+ExtResource("3_nygt7"): 3,
+ExtResource("4_gnciu"): 3
+})
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

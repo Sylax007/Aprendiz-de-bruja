@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cprw77lhl30vs"]
 
-[ext_resource type="Script" uid="uid://dbr5w8aunurxx" path="res://scenes/inv_slot.gd" id="1_4qi3r"]
+[ext_resource type="Script" uid="uid://dbr5w8aunurxx" path="res://scripts/inv_slot.gd" id="1_4qi3r"]
 [ext_resource type="Script" uid="uid://cv05mu4w37iue" path="res://scripts/slot.gd" id="2_oyh1m"]
 [ext_resource type="FontFile" uid="uid://bubkqg1s5webm" path="res://assets/fonts/Aladin-Regular.ttf" id="3_oyh1m"]
 

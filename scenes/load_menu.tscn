@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://cskhr5mhdm07b"]
+
+[ext_resource type="Script" uid="uid://jih33ywsqwje" path="res://scripts/load_menu.gd" id="1_8tv1f"]
+[ext_resource type="FontFile" uid="uid://bubkqg1s5webm" path="res://assets/fonts/Aladin-Regular.ttf" id="1_o70tx"]
+[ext_resource type="StyleBox" uid="uid://dkc0gtejqcp8y" path="res://textures/hover_btn.tres" id="2_8tv1f"]
+[ext_resource type="StyleBox" uid="uid://dt3gb7u2my2rb" path="res://textures/normail_btn.tres" id="3_xnhyc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o70tx"]
+bg_color = Color(0.37, 0.259493, 0.1628, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbg7j"]
+bg_color = Color(0.312, 0, 0.72, 1)
+
+[sub_resource type="Theme" id="Theme_ejqm1"]
+default_font = ExtResource("1_o70tx")
+Panel/styles/panel = SubResource("StyleBoxFlat_fbg7j")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnhyc"]
+bg_color = Color(0, 0, 0, 0.431373)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Control" type="Panel"]
+custom_minimum_size = Vector2(330, 340)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -170.0
+offset_right = 165.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_styles/panel = SubResource("StyleBoxFlat_o70tx")
+script = ExtResource("1_8tv1f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -147.5
+offset_right = 150.0
+offset_bottom = 147.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ejqm1")
+theme_override_constants/separation = 16
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 260)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_constants/outline_size = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xnhyc")
+fixed_icon_size = Vector2i(30, 20)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 32
+
+[node name="cancel" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = ExtResource("2_8tv1f")
+theme_override_styles/normal = ExtResource("3_xnhyc")
+text = "Cancel"
+
+[node name="load" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = ExtResource("2_8tv1f")
+theme_override_styles/normal = ExtResource("3_xnhyc")
+text = "Load"
+
+[connection signal="draw" from="." to="." method="_on_draw"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/load" to="." method="_on_load_pressed"]

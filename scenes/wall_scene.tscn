@@ -1,47 +1,70 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4fpa3iagx1j3"]
+[gd_scene load_steps=9 format=3 uid="uid://b4fpa3iagx1j3"]
 
 [ext_resource type="Texture2D" uid="uid://kaoh6aysfxc4" path="res://assets/others/Vida enemigos1.png" id="1_1cish"]
 [ext_resource type="Script" uid="uid://dwmgx6xqokq4y" path="res://scripts/wall_scene.gd" id="1_dmn8w"]
 [ext_resource type="Texture2D" uid="uid://d1l41rn7clxq5" path="res://assets/others/Vida enemigos(1).png" id="2_dmn8w"]
+[ext_resource type="Texture2D" uid="uid://bcphye2y4chkv" path="res://assets/Monsters/Monsters/plantas.png" id="2_jgun7"]
 [ext_resource type="Script" uid="uid://dr0rv0s2qs3er" path="res://scripts/timers/some_timer.gd" id="3_jgun7"]
+[ext_resource type="Script" uid="uid://b6sp7wvmumf8i" path="res://scenes/has_item_drop.gd" id="6_a2vxr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2vxr"]
+atlas = ExtResource("2_jgun7")
+region = Rect2(0, 0, 23.5788, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a2vxr"]
-size = Vector2(17.5, 64)
-
-[sub_resource type="Gradient" id="Gradient_wr0ar"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(0.44, 0.278373, 0.1848, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_805ub"]
-gradient = SubResource("Gradient_wr0ar")
+size = Vector2(33.75, 43)
 
 [node name="wall_scene" type="StaticBody2D"]
-collision_layer = 32
-collision_mask = 49
+z_index = 2
+disable_mode = 2
+collision_layer = 256
+collision_mask = 16
 script = ExtResource("1_dmn8w")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+z_index = 2
+amount = 4
+texture = SubResource("AtlasTexture_a2vxr")
+lifetime = 1.5
+preprocess = 1.0
+explosiveness = 0.2
+lifetime_randomness = 0.3
+emission_shape = 4
+emission_points = PackedVector2Array()
+emission_colors = PackedColorArray()
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 40.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+tangential_accel_min = -25.52
+tangential_accel_max = 14.48
+scale_amount_min = 0.4
+color = Color(1, 1, 1, 0.584314)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_a2vxr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.273438, 1)
-texture = SubResource("GradientTexture2D_805ub")
-
 [node name="life_bar" type="TextureProgressBar" parent="."]
 offset_left = -18.0
-offset_top = -42.0
+offset_top = -30.0
 offset_right = 19.0
-offset_bottom = -37.0
-value = 100.0
+offset_bottom = -25.0
+value = 1.0
 nine_patch_stretch = true
 texture_under = ExtResource("1_1cish")
 texture_over = ExtResource("2_dmn8w")
 texture_progress = ExtResource("1_1cish")
 tint_under = Color(0, 0, 0, 1)
-tint_progress = Color(0.925624, 0.269709, 0, 1)
+tint_progress = Color(0, 0.627738, 0.489961, 1)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.0
+ignore_time_scale = true
 script = ExtResource("3_jgun7")
+
+[node name="has_item_drop" type="Timer" parent="."]
+script = ExtResource("6_a2vxr")
 
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

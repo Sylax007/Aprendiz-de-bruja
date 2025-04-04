@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=19 format=3 uid="uid://dhxpotprsas0q"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_3ihpx"]
+[ext_resource type="Resource" uid="uid://cu5ed2pd2uurp" path="res://Items/Blue_droplet.tres" id="2_tnwfx"]
+[ext_resource type="Resource" uid="uid://c64kob4iq1u6g" path="res://Items/Bottled_soul.tres" id="3_bj8xi"]
+[ext_resource type="Resource" uid="uid://bimhf8vx7mh3v" path="res://Items/Clover.tres" id="4_a6joa"]
+[ext_resource type="Resource" uid="uid://bua6qqx5avr0p" path="res://Items/Creepy_eye.tres" id="5_tl3h8"]
+[ext_resource type="Resource" uid="uid://cxikw7kil48g" path="res://Items/Daisy.tres" id="6_5641u"]
+[ext_resource type="Resource" uid="uid://cfmv87w1pjerb" path="res://Items/Forbidden_meat.tres" id="7_a4j3d"]
+[ext_resource type="Resource" uid="uid://vbpmdvkp1hso" path="res://Items/Green_droplet.tres" id="8_rg864"]
+[ext_resource type="Script" uid="uid://dsk7hwjnpl646" path="res://scripts/inventario/inventory.gd" id="9_8l7uv"]
+[ext_resource type="Resource" uid="uid://7yex61vcrmpa" path="res://Items/Lucky_clover.tres" id="9_yexya"]
+[ext_resource type="Resource" uid="uid://crwr0a7juh6iy" path="res://Items/Mandrake.tres" id="10_qpfk7"]
+[ext_resource type="Resource" uid="uid://clsx4dq072ojv" path="res://Items/Orange_droplet.tres" id="11_afkxb"]
+[ext_resource type="Resource" uid="uid://c30dbnplshvn8" path="res://Items/Phantom_cloth.tres" id="12_exijy"]
+[ext_resource type="Resource" uid="uid://ca3ru2yhbguf5" path="res://Items/Poppy.tres" id="13_q1xrn"]
+[ext_resource type="Resource" uid="uid://cllsvwlybrvbr" path="res://Items/Purple_droplet.tres" id="14_br7ta"]
+[ext_resource type="Resource" uid="uid://d10hvl78aikvr" path="res://Items/Red_droplet.tres" id="15_48aqy"]
+[ext_resource type="Resource" uid="uid://be5qevtrkyjas" path="res://Items/Summer_cloud.tres" id="16_bt54p"]
+[ext_resource type="Resource" uid="uid://cyccbp0rbn8sw" path="res://Items/Yellow_droplet.tres" id="17_tyylw"]
+
+[resource]
+script = ExtResource("9_8l7uv")
+items = Dictionary[String, ExtResource("1_3ihpx")]({
+"blue droptlet": ExtResource("2_tnwfx"),
+"bottled soul": ExtResource("3_bj8xi"),
+"clover": ExtResource("4_a6joa"),
+"creeppy eye": ExtResource("5_tl3h8"),
+"daisy": ExtResource("6_5641u"),
+"forbidden meat": ExtResource("7_a4j3d"),
+"green droplet": ExtResource("8_rg864"),
+"lucky clover": ExtResource("9_yexya"),
+"mandrake": ExtResource("10_qpfk7"),
+"orange droplet": ExtResource("11_afkxb"),
+"phantom cloth": ExtResource("12_exijy"),
+"poppy": ExtResource("13_q1xrn"),
+"purple droplet": ExtResource("14_br7ta"),
+"red droplet": ExtResource("15_48aqy"),
+"summer cloud": ExtResource("16_bt54p"),
+"yellow droplet": ExtResource("17_tyylw")
+})
+metadata/_custom_type_script = "uid://dsk7hwjnpl646"

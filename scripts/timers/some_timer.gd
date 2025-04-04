@@ -13,3 +13,4 @@ func _process(delta: float) -> void:
 func _on_timeout() -> void:
 	get_parent().recover()
 	get_parent().is_timer_paused = true
+	get_parent().has_item_drop = true

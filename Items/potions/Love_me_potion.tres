@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=5 format=3 uid="uid://cpwfgp02yiph7"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_i8atr"]
+[ext_resource type="Resource" uid="uid://bua6qqx5avr0p" path="res://Items/Creepy_eye.tres" id="2_m70sp"]
+[ext_resource type="Texture2D" uid="uid://b3ya23y7popd3" path="res://assets/potions/3. Love me potion.png" id="2_ywnt2"]
+[ext_resource type="Resource" uid="uid://d10hvl78aikvr" path="res://Items/Red_droplet.tres" id="3_dhak1"]
+
+[resource]
+script = ExtResource("1_i8atr")
+texture = ExtResource("2_ywnt2")
+drinkable = false
+spell = false
+name = "Love me potion"
+quantity = 0
+price = 200
+damage = 0
+cooldown = 0.0
+temperature = 0
+speed = 0
+duration = 0.0
+types = Dictionary[String, float]({})
+description = "This potion connects the two people who take it in a deep feeling of love. The effect is momentary. Overdoses are dangerous"
+recipe = Dictionary[ExtResource("1_i8atr"), int]({
+ExtResource("2_m70sp"): 2,
+ExtResource("3_dhak1"): 2
+})
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

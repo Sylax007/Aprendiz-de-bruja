@@ -1,16 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwbwm3v2xv6o"]
+[gd_scene load_steps=10 format=3 uid="uid://dwbwm3v2xv6o"]
 
 [ext_resource type="Script" uid="uid://cmqfxiccy514" path="res://scripts/main_menu.gd" id="1_oa1go"]
-[ext_resource type="Texture2D" uid="uid://c77xanl7nbutf" path="res://assets/menú fondo/sprite1.png" id="2_0o4t1"]
-[ext_resource type="Texture2D" uid="uid://bwiochedlnq5t" path="res://assets/menú fondo/sprite2.png" id="3_0k4wn"]
+[ext_resource type="Texture2D" uid="uid://p5veqsdf5m4r" path="res://assets/others/Startingscreenblank.png" id="2_tbmy8"]
+[ext_resource type="StyleBox" uid="uid://bpjc1algxchie" path="res://textures/button_hover.tres" id="3_tbmy8"]
 [ext_resource type="StyleBox" uid="uid://babai2w43h64m" path="res://textures/button_box.tres" id="4_oa1go"]
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_mxgkd"]
-frames = 2
-speed_scale = 2.0
-frame_0/texture = ExtResource("2_0o4t1")
-frame_1/texture = ExtResource("3_0k4wn")
-frame_1/duration = 1.0
+[ext_resource type="Texture2D" uid="uid://cfv6qpasgpc" path="res://assets/Starting menu/Botones/new game.png" id="4_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://culr5k0xadtv6" path="res://assets/Starting menu/Botones/Continue.png" id="5_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://dv6ldr6hpm84s" path="res://assets/Starting menu/Botones/Load game.png" id="6_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://dc8desd2te8vi" path="res://assets/Starting menu/Botones/Quit game.png" id="7_lgwnu"]
 
 [sub_resource type="SystemFont" id="SystemFont_7bbuq"]
 font_names = PackedStringArray("Sans-Serif")
@@ -36,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AnimatedTexture_mxgkd")
+texture = ExtResource("2_tbmy8")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -52,42 +49,12 @@ theme_override_constants/margin_bottom = 12
 
 [node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-theme_override_constants/separation = 20
+size_flags_horizontal = 4
+theme_override_constants/separation = 18
+vertical = true
 
 [node name="separator" type="Control" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/BoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 2
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-
-[node name="new game" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_styles/normal = ExtResource("4_oa1go")
-keep_pressed_outside = true
-text = "New Game"
-
-[node name="continue" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_styles/normal = ExtResource("4_oa1go")
-text = "Continue"
-
-[node name="load game" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_styles/normal = ExtResource("4_oa1go")
-text = "Load Game"
-
-[node name="quit" type="Button" parent="MarginContainer/BoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_styles/normal = ExtResource("4_oa1go")
-text = "Quit"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
@@ -107,16 +74,50 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="separator3" type="Control" parent="MarginContainer/BoxContainer"]
+[node name="button_grid" type="GridContainer" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 10
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="new game" type="Button" parent="MarginContainer/BoxContainer/button_grid"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/hover = ExtResource("3_tbmy8")
+theme_override_styles/normal = ExtResource("4_oa1go")
+keep_pressed_outside = true
+icon = ExtResource("4_tbmy8")
+
+[node name="continue" type="Button" parent="MarginContainer/BoxContainer/button_grid"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/hover = ExtResource("3_tbmy8")
+theme_override_styles/normal = ExtResource("4_oa1go")
+icon = ExtResource("5_jk1qb")
+
+[node name="load game" type="Button" parent="MarginContainer/BoxContainer/button_grid"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/hover = ExtResource("3_tbmy8")
+theme_override_styles/normal = ExtResource("4_oa1go")
+icon = ExtResource("6_5dd4i")
+
+[node name="quit" type="Button" parent="MarginContainer/BoxContainer/button_grid"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/hover = ExtResource("3_tbmy8")
+theme_override_styles/normal = ExtResource("4_oa1go")
+icon = ExtResource("7_lgwnu")
 
 [node name="separator4" type="Control" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
 
-[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/new game" to="." method="_on_status_pressed"]
-[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/new game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/continue" to="." method="_on_orders_pressed"]
-[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/load game" to="." method="_on_load_game_pressed"]
-[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/load game" to="." method="_on_collecting_pressed"]
-[connection signal="pressed" from="MarginContainer/BoxContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/button_grid/new game" to="." method="_on_status_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/button_grid/new game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/button_grid/continue" to="." method="_on_orders_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/button_grid/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/button_grid/load game" to="." method="_on_collecting_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/button_grid/load game" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/button_grid/quit" to="." method="_on_quit_pressed"]

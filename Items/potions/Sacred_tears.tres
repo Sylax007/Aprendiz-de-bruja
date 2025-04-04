@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=6 format=3 uid="uid://3ngu6qov8rds"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_dyl7u"]
+[ext_resource type="Resource" uid="uid://cyccbp0rbn8sw" path="res://Items/Yellow_droplet.tres" id="2_yssr3"]
+[ext_resource type="Resource" uid="uid://c64kob4iq1u6g" path="res://Items/Bottled_soul.tres" id="3_p5a68"]
+[ext_resource type="Resource" uid="uid://7yex61vcrmpa" path="res://Items/Lucky_clover.tres" id="4_mfbmq"]
+[ext_resource type="Texture2D" uid="uid://cdv0yyiyetoim" path="res://assets/potions/7. Sacred tears.png" id="5_yssr3"]
+
+[resource]
+script = ExtResource("1_dyl7u")
+texture = ExtResource("5_yssr3")
+name = "Sacred tears"
+quantity = 0
+price = 1200
+damage = 0
+cooldown = 0.0
+temperature = 0
+speed = 0
+duration = 0.0
+types = Dictionary[String, float]({})
+description = "They say an angel, moved by the kindness of a human, offered its bottled tears to grant her a wish. It dispels any curse or black magic."
+recipe = Dictionary[ExtResource("1_dyl7u"), int]({
+ExtResource("2_yssr3"): 5,
+ExtResource("3_p5a68"): 5,
+ExtResource("4_mfbmq"): 5
+})
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=5 format=3 uid="uid://mb8idng73san"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_8strh"]
+[ext_resource type="Resource" uid="uid://clsx4dq072ojv" path="res://Items/Orange_droplet.tres" id="2_1xt8u"]
+[ext_resource type="Texture2D" uid="uid://cmgda7ax40ang" path="res://assets/potions/5. Confidence push.png" id="2_ldwmw"]
+[ext_resource type="Resource" uid="uid://ca3ru2yhbguf5" path="res://Items/Poppy.tres" id="3_7rqby"]
+
+[resource]
+script = ExtResource("1_8strh")
+texture = ExtResource("2_ldwmw")
+drinkable = true
+spell = false
+name = "Confidence push"
+quantity = 0
+price = 500
+damage = 0
+cooldown = 0.0
+temperature = 0
+speed = 0
+duration = 0.0
+types = Dictionary[String, float]({})
+description = "This potion is especially useful for those who are shy, or particularly reserved, to show what they truly feel or think."
+recipe = Dictionary[ExtResource("1_8strh"), int]({
+ExtResource("2_1xt8u"): 3,
+ExtResource("3_7rqby"): 2
+})
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

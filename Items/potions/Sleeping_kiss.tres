@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=5 format=3 uid="uid://cr73unq1g8a35"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_msjcj"]
+[ext_resource type="Resource" uid="uid://cxikw7kil48g" path="res://Items/Daisy.tres" id="2_ps78l"]
+[ext_resource type="Texture2D" uid="uid://c4kiqsya0kf8" path="res://assets/potions/2. Sleeping kiss.png" id="2_tn1hb"]
+[ext_resource type="Resource" uid="uid://c30dbnplshvn8" path="res://Items/Phantom_cloth.tres" id="3_siws4"]
+
+[resource]
+script = ExtResource("1_msjcj")
+texture = ExtResource("2_tn1hb")
+drinkable = false
+spell = false
+name = "Sleeping kiss"
+quantity = 0
+price = 150
+damage = 0
+cooldown = 0.0
+temperature = 0
+speed = 0
+duration = 0.0
+types = Dictionary[String, float]({})
+description = "This potion produces deepdrowsiness. Especially usefulfor those who suffer frominsomnia or need to recoverfrom fatigue."
+recipe = Dictionary[ExtResource("1_msjcj"), int]({
+ExtResource("2_ps78l"): 3,
+ExtResource("3_siws4"): 2
+})
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

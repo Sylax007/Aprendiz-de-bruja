@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Mission" load_steps=2 format=3 uid="uid://cb0njdpbmljsq"]
+
+[ext_resource type="Script" uid="uid://dufeh883c2h5r" path="res://scripts/mission_res.gd" id="1_wmgm4"]
+
+[resource]
+script = ExtResource("1_wmgm4")
+name = "Sacred tears"
+description = "Collect 5 yellow droplets 5 bottled soul and 5 lucky clovers"
+reward = 10000
+metadata/_custom_type_script = "uid://dufeh883c2h5r"

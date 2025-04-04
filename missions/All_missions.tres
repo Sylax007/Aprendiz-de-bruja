@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AllMissions" load_steps=4 format=3 uid="uid://bv3f0g1k5lyva"]
+
+[ext_resource type="Script" uid="uid://dufeh883c2h5r" path="res://scripts/mission_res.gd" id="1_api8x"]
+[ext_resource type="Resource" uid="uid://x2fr18r73ao6" path="res://missions/mission1.tres" id="2_hoo72"]
+[ext_resource type="Script" uid="uid://dc4s08fhdupld" path="res://scripts/missions_dict.gd" id="8_28w7j"]
+
+[resource]
+script = ExtResource("8_28w7j")
+items = Dictionary[ExtResource("1_api8x"), bool]({
+ExtResource("2_hoo72"): false
+})
+metadata/_custom_type_script = "uid://dc4s08fhdupld"

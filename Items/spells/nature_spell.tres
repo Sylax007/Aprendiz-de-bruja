@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=4 format=3 uid="uid://cc783bl6etr2e"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_rttdl"]
+[ext_resource type="Texture2D" uid="uid://cj53fo37t68f0" path="res://assets/bullet/Nature spell(2).png" id="2_wnqab"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3clbj"]
+atlas = ExtResource("2_wnqab")
+region = Rect2(771.915, 13.3954, 36.4343, 28.7369)
+
+[resource]
+script = ExtResource("1_rttdl")
+texture = SubResource("AtlasTexture_3clbj")
+drinkable = false
+spell = true
+name = "Nature spell"
+quantity = 0
+price = 300
+damage = 10
+cooldown = 0.3
+temperature = 0
+speed = 10
+duration = 0.0
+types = Dictionary[String, float]({
+"light": 0.2,
+"nature": 1.0
+})
+description = "A spell forged by the forces of nature, this will help you fight against evil monsters"
+recipe = Dictionary[ExtResource("1_rttdl"), int]({})
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

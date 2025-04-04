@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=4 format=3 uid="uid://slwoda7xd5mq"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_gm3jb"]
+[ext_resource type="Texture2D" uid="uid://dl2ue63v11jim" path="res://assets/bullet/Dark magic.png" id="2_3clbj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22tv4"]
+atlas = ExtResource("2_3clbj")
+region = Rect2(2322.99, 20.3422, 32.3291, 26.6842)
+
+[resource]
+script = ExtResource("1_gm3jb")
+texture = SubResource("AtlasTexture_22tv4")
+drinkable = false
+spell = true
+name = "Dark magic"
+quantity = 0
+price = 150
+damage = 50
+cooldown = 2.0
+temperature = 0
+speed = 6
+duration = 0.0
+types = Dictionary[String, float]({
+"darkness": 1.2
+})
+description = "A powerful spell made from the energy of the mirror dimension"
+recipe = Dictionary[ExtResource("1_gm3jb"), int]({})
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

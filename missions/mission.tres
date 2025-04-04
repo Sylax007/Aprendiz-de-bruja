@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Mission" load_steps=2 format=3 uid="uid://dq8jxp7vpd6wy"]
+
+[ext_resource type="Script" uid="uid://dufeh883c2h5r" path="res://scripts/mission_res.gd" id="1_60ftm"]
+
+[resource]
+script = ExtResource("1_60ftm")
+name = "Confidence push"
+description = "Collect 5 yellow droptlet 5 bottled soul and 5 lucky clovers"
+reward = 3000
+metadata/_custom_type_script = "uid://dufeh883c2h5r"

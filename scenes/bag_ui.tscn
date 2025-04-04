@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b1wusmlkyhwia"]
+[gd_scene load_steps=21 format=3 uid="uid://b1wusmlkyhwia"]
 
 [ext_resource type="Script" uid="uid://s2niukkvsuvk" path="res://scripts/inv_ui.gd" id="1_4wrg3"]
 [ext_resource type="FontFile" uid="uid://w2drba428v6g" path="res://assets/fonts/Victorian.otf" id="2_23blq"]
@@ -20,16 +20,11 @@
 [ext_resource type="Texture2D" uid="uid://dddelrhhgises" path="res://assets/ingredient list/15.Forbidden meat.png" id="18_tlu0w"]
 [ext_resource type="Texture2D" uid="uid://blrnvnbkub7jp" path="res://assets/ingredient list/16. Bottled soul.png" id="19_eq6mc"]
 
-[sub_resource type="Gradient" id="Gradient_wefod"]
-colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_2tqa5"]
-gradient = SubResource("Gradient_wefod")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cr8l"]
 
-[node name="NinePatchRect" type="NinePatchRect"]
+[node name="NinePatchRect" type="Control"]
 custom_minimum_size = Vector2(120, 280)
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -37,14 +32,12 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -64.0
 offset_top = -140.0
-offset_right = 64.0
-offset_bottom = 140.0
+offset_right = 96.0
+offset_bottom = 166.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
-size_flags_vertical = 6
-texture = SubResource("GradientTexture2D_2tqa5")
-region_rect = Rect2(107, 11.5, 26, 25)
+size_flags_vertical = 3
 script = ExtResource("1_4wrg3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -55,16 +48,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -80.0
-offset_top = -149.0
+offset_top = -153.0
 offset_right = 80.0
-offset_bottom = 149.0
+offset_bottom = 153.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 1
+size_flags_vertical = 10
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_23blq")
@@ -77,13 +70,13 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(160, 250)
 layout_mode = 2
 theme_override_colors/guide_color = Color(1, 0.965, 0.86, 0)
-theme_override_colors/font_hovered_color = Color(0.74052, 0.6336, 0.99, 1)
+theme_override_colors/font_hovered_color = Color(0, 0.784, 0.98, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 4
 theme_override_constants/v_separation = 24
 theme_override_constants/icon_margin = 10
 theme_override_fonts/font = ExtResource("3_1vrcm")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cr8l")
 select_mode = 1
 allow_reselect = true
@@ -127,4 +120,4 @@ item_15/icon = ExtResource("19_eq6mc")
 [node name="separator" type="Control" parent="VBoxContainer"]
 layout_mode = 2
 
-[connection signal="draw" from="." to="." method="_on_draw" flags=6]
+[connection signal="draw" from="." to="." method="_on_draw"]

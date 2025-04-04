@@ -13,3 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_timeout() -> void:
 	get_parent().has_attack_cd = true
+	get_parent().is_attacking = true

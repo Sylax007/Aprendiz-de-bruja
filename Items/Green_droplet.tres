@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://vbpmdvkp1hso"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_8pp5q"]
+[ext_resource type="Texture2D" uid="uid://bj3e3t6bb4mnv" path="res://assets/ingredient list/7.Green droplet.png" id="2_tw5p6"]
+
+[resource]
+script = ExtResource("1_8pp5q")
+texture = ExtResource("2_tw5p6")
+name = "Green droplet"
+quantity = 0
+price = 70
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

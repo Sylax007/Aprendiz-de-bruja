@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Save_res" load_steps=3 format=3 uid="uid://brlh8er6tu67i"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_36hug"]
+[ext_resource type="Script" uid="uid://cnd0hk1ch6x28" path="res://scripts/player_res.gd" id="2_35bep"]
+
+[resource]
+script = ExtResource("2_35bep")
+scene = ""
+current_potions = Array[ExtResource("1_36hug")]([])
+current_spell = "splash"
+coins = 0

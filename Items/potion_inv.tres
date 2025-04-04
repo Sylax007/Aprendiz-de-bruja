@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=10 format=3 uid="uid://csmmfdx3ob2b8"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_p2oo4"]
+[ext_resource type="Resource" uid="uid://c4vlqt3w8doau" path="res://Items/potions/Memory_of_sacrifice.tres" id="2_6vwn4"]
+[ext_resource type="Resource" uid="uid://3ngu6qov8rds" path="res://Items/potions/Sacred_tears.tres" id="3_o472a"]
+[ext_resource type="Resource" uid="uid://mb8idng73san" path="res://Items/potions/Confidence_push.tres" id="6_b016o"]
+[ext_resource type="Resource" uid="uid://bw08m5xyvyqmb" path="res://Items/potions/Focusing_water.tres" id="9_gywm3"]
+[ext_resource type="Resource" uid="uid://b0rdlblj1acjw" path="res://Items/potions/Healing_potion.tres" id="12_6cqlf"]
+[ext_resource type="Resource" uid="uid://cpwfgp02yiph7" path="res://Items/potions/Love_me_potion.tres" id="13_bgtii"]
+[ext_resource type="Resource" uid="uid://cr73unq1g8a35" path="res://Items/potions/Sleeping_kiss.tres" id="21_tqsav"]
+[ext_resource type="Script" uid="uid://dsk7hwjnpl646" path="res://scripts/inventario/inventory.gd" id="23_cxreg"]
+
+[resource]
+script = ExtResource("23_cxreg")
+items = Dictionary[String, ExtResource("1_p2oo4")]({
+"Confidence push": ExtResource("6_b016o"),
+"Focusing water": ExtResource("9_gywm3"),
+"Healing potion": ExtResource("12_6cqlf"),
+"Love me potion": ExtResource("13_bgtii"),
+"Memory of sacrifice": ExtResource("2_6vwn4"),
+"Sacred tears": ExtResource("3_o472a"),
+"Sleeping kiss": ExtResource("21_tqsav")
+})
+metadata/_custom_type_script = "uid://dsk7hwjnpl646"

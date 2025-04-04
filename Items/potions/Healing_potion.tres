@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=5 format=3 uid="uid://b0rdlblj1acjw"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_1pbf5"]
+[ext_resource type="Texture2D" uid="uid://75srerfht7t0" path="res://assets/potions/1. Healing potion.png" id="2_fbk1r"]
+[ext_resource type="Resource" uid="uid://bimhf8vx7mh3v" path="res://Items/Clover.tres" id="2_j2avs"]
+[ext_resource type="Resource" uid="uid://vbpmdvkp1hso" path="res://Items/Green_droplet.tres" id="3_tmgu0"]
+
+[resource]
+script = ExtResource("1_1pbf5")
+texture = ExtResource("2_fbk1r")
+drinkable = true
+spell = false
+name = "Healing potion"
+quantity = 0
+price = 100
+damage = 0
+cooldown = 0.0
+temperature = 0
+speed = 0
+duration = 0.0
+types = Dictionary[String, float]({})
+description = "A bitter potion that heals minor wounds, however, it does not restore fatigue."
+recipe = Dictionary[ExtResource("1_1pbf5"), int]({
+ExtResource("2_j2avs"): 1,
+ExtResource("3_tmgu0"): 2
+})
+metadata/_custom_type_script = "uid://6tnabwgp6vrp"

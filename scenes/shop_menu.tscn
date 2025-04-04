@@ -1,0 +1,177 @@
+[gd_scene load_steps=10 format=3 uid="uid://cxgf3f5686yh"]
+
+[ext_resource type="Theme" uid="uid://b0by4h20qxjrr" path="res://textures/label.tres" id="1_jsmax"]
+[ext_resource type="PackedScene" uid="uid://b1wusmlkyhwia" path="res://scenes/bag_ui.tscn" id="1_l4r40"]
+[ext_resource type="Script" uid="uid://br5n7qmbmtgcq" path="res://scripts/shop_menu.gd" id="1_lngpu"]
+[ext_resource type="FontFile" uid="uid://bubkqg1s5webm" path="res://assets/fonts/Aladin-Regular.ttf" id="3_ccr50"]
+[ext_resource type="Texture2D" uid="uid://byjyjmxolecwj" path="res://assets/bullet/ataques/001.png" id="4_han1p"]
+[ext_resource type="Script" uid="uid://ceq7ntokom5n0" path="res://scripts/item_list.gd" id="6_xw4en"]
+
+[sub_resource type="Gradient" id="Gradient_ia46t"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.716352, 0.431687, 0.151147, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qfn3a"]
+gradient = SubResource("Gradient_ia46t")
+
+[sub_resource type="Theme" id="Theme_6iqus"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_lngpu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_qfn3a")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jsmax")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="separator" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="NinePatchRect" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_l4r40")]
+custom_minimum_size = Vector2(160, 280)
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(216, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_fonts/font = ExtResource("3_ccr50")
+theme_override_font_sizes/font_size = 12
+max_columns = 3
+same_column_width = true
+fixed_column_width = 68
+icon_mode = 0
+fixed_icon_size = Vector2i(32, 32)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_6iqus")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+vertical = true
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_han1p")
+expand_mode = 1
+
+[node name="title" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "spell/potion name"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+columns = 2
+
+[node name="damage" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer/GridContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+
+[node name="price" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer/GridContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="throwable" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer/GridContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "throwable: y/n"
+
+[node name="description" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 6
+text = "spell/potion description
+"
+
+[node name="ItemList" type="ItemList" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 6
+max_columns = 3
+fixed_column_width = 40
+fixed_icon_size = Vector2i(30, 30)
+script = ExtResource("6_xw4en")
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Unlock/Buy"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+
+[node name="coins_label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Coins: "
+
+[node name="coins" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+
+[connection signal="draw" from="MarginContainer/HBoxContainer/ItemList" to="." method="_on_item_list_draw"]
+[connection signal="item_selected" from="MarginContainer/HBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]
+[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer/ItemList" to="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer/ItemList" method="_on_item_selected"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Panel/MarginContainer/BoxContainer/Button" to="." method="_on_button_pressed"]

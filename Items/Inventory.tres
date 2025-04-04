@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=25 format=3 uid="uid://ltxfq6gopk37"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_050ki"]
+[ext_resource type="Resource" uid="uid://cxikw7kil48g" path="res://Items/Daisy.tres" id="3_mw4xe"]
+[ext_resource type="Resource" uid="uid://be5qevtrkyjas" path="res://Items/Summer_cloud.tres" id="4_2hl5a"]
+[ext_resource type="Resource" uid="uid://3ngu6qov8rds" path="res://Items/potions/Sacred_tears.tres" id="4_liord"]
+[ext_resource type="Resource" uid="uid://bimhf8vx7mh3v" path="res://Items/Clover.tres" id="4_of4dd"]
+[ext_resource type="Resource" uid="uid://ca3ru2yhbguf5" path="res://Items/Poppy.tres" id="5_a14p0"]
+[ext_resource type="Script" uid="uid://dsk7hwjnpl646" path="res://scripts/inventario/inventory.gd" id="5_o3uer"]
+[ext_resource type="Resource" uid="uid://mb8idng73san" path="res://Items/potions/Confidence_push.tres" id="5_pje48"]
+[ext_resource type="Resource" uid="uid://7yex61vcrmpa" path="res://Items/Lucky_clover.tres" id="6_liord"]
+[ext_resource type="Resource" uid="uid://crwr0a7juh6iy" path="res://Items/Mandrake.tres" id="7_pje48"]
+[ext_resource type="Resource" uid="uid://bw08m5xyvyqmb" path="res://Items/potions/Focusing_water.tres" id="8_5q4ei"]
+[ext_resource type="Resource" uid="uid://vbpmdvkp1hso" path="res://Items/Green_droplet.tres" id="8_of4dd"]
+[ext_resource type="Resource" uid="uid://clsx4dq072ojv" path="res://Items/Orange_droplet.tres" id="9_5q4ei"]
+[ext_resource type="Resource" uid="uid://d10hvl78aikvr" path="res://Items/Red_droplet.tres" id="10_igglp"]
+[ext_resource type="Resource" uid="uid://cu5ed2pd2uurp" path="res://Items/Blue_droplet.tres" id="11_3q5jf"]
+[ext_resource type="Resource" uid="uid://b0rdlblj1acjw" path="res://Items/potions/Healing_potion.tres" id="11_igglp"]
+[ext_resource type="Resource" uid="uid://cpwfgp02yiph7" path="res://Items/potions/Love_me_potion.tres" id="12_3q5jf"]
+[ext_resource type="Resource" uid="uid://cllsvwlybrvbr" path="res://Items/Purple_droplet.tres" id="13_4h1os"]
+[ext_resource type="Resource" uid="uid://bua6qqx5avr0p" path="res://Items/Creepy_eye.tres" id="14_nexsg"]
+[ext_resource type="Resource" uid="uid://c30dbnplshvn8" path="res://Items/Phantom_cloth.tres" id="15_2jqgy"]
+[ext_resource type="Resource" uid="uid://cfmv87w1pjerb" path="res://Items/Forbidden_meat.tres" id="16_y6uqf"]
+[ext_resource type="Resource" uid="uid://c64kob4iq1u6g" path="res://Items/Bottled_soul.tres" id="17_4p26d"]
+[ext_resource type="Resource" uid="uid://cr73unq1g8a35" path="res://Items/potions/Sleeping_kiss.tres" id="20_psu1q"]
+[ext_resource type="Resource" uid="uid://c4vlqt3w8doau" path="res://Items/potions/Memory_of_sacrifice.tres" id="22_pje48"]
+
+[resource]
+script = ExtResource("5_o3uer")
+items = Dictionary[String, ExtResource("1_050ki")]({
+"blue droplet": ExtResource("11_3q5jf"),
+"bottled soul": ExtResource("17_4p26d"),
+"clover": ExtResource("4_of4dd"),
+"confidence push": ExtResource("5_pje48"),
+"creepy eye": ExtResource("14_nexsg"),
+"daisy": ExtResource("3_mw4xe"),
+"focusing water": ExtResource("8_5q4ei"),
+"forbidden meat": ExtResource("16_y6uqf"),
+"green droplet": ExtResource("8_of4dd"),
+"healing potion": ExtResource("11_igglp"),
+"love me potion": ExtResource("12_3q5jf"),
+"lucky clover": ExtResource("6_liord"),
+"mandrake": ExtResource("7_pje48"),
+"memory of sacrifice": ExtResource("22_pje48"),
+"orange droplet": ExtResource("9_5q4ei"),
+"phantom cloth": ExtResource("15_2jqgy"),
+"poppy": ExtResource("5_a14p0"),
+"purple droplet": ExtResource("13_4h1os"),
+"red droplet": ExtResource("10_igglp"),
+"sacred tears": ExtResource("4_liord"),
+"sleeping kiss": ExtResource("20_psu1q"),
+"summer cloud": ExtResource("4_2hl5a")
+})
+metadata/_custom_type_script = "uid://dsk7hwjnpl646"

@@ -67,12 +67,11 @@ grow_vertical = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_constants/separation = 22
+theme_override_constants/separation = 32
 alignment = 2
 
-[node name="separator6" type="Control" parent="MarginContainer/HBoxContainer"]
+[node name="separator5" type="Control" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
 
 [node name="potion_container" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -85,7 +84,6 @@ layout_mode = 2
 custom_minimum_size = Vector2(200, 320)
 layout_mode = 2
 theme = SubResource("Theme_j8d85")
-theme_override_colors/guide_color = Color(1, 0.965, 0.86, 0)
 theme_override_colors/font_hovered_color = Color(0.74052, 0.6336, 0.99, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 4
@@ -343,7 +341,6 @@ theme_override_font_sizes/normal_font_size = 14
 theme_override_styles/focus = SubResource("StyleBoxFlat_brsb2")
 theme_override_styles/normal = SubResource("StyleBoxFlat_yyk2a")
 bbcode_enabled = true
-text = "fsdfsdfsdfsa fad fadsf adf  adsf af a ds f ad sfa dsfdf a f"
 fit_content = true
 selection_enabled = true
 

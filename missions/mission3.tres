@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Mission" load_steps=2 format=3 uid="uid://b33q70g408kox"]
+
+[ext_resource type="Script" uid="uid://dufeh883c2h5r" path="res://scripts/mission_res.gd" id="1_kof7l"]
+
+[resource]
+script = ExtResource("1_kof7l")
+name = "Love me potion"
+description = "Collect 2 creepy eyes and 2 red droplets"
+reward = 1000
+metadata/_custom_type_script = "uid://dufeh883c2h5r"

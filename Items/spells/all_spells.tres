@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=6 format=3 uid="uid://dtsnageh287xl"]
+
+[ext_resource type="Script" uid="uid://6tnabwgp6vrp" path="res://scripts/inventario/inv_item.gd" id="1_xoga5"]
+[ext_resource type="Resource" uid="uid://fm76dp5sincb" path="res://Items/spells/splash.tres" id="2_rh0k5"]
+[ext_resource type="Resource" uid="uid://slwoda7xd5mq" path="res://Items/spells/dark_magic.tres" id="3_83h6i"]
+[ext_resource type="Resource" uid="uid://cc783bl6etr2e" path="res://Items/spells/nature_spell.tres" id="4_d6keq"]
+[ext_resource type="Script" uid="uid://dsk7hwjnpl646" path="res://scripts/inventario/inventory.gd" id="5_bd7cb"]
+
+[resource]
+script = ExtResource("5_bd7cb")
+items = Dictionary[String, ExtResource("1_xoga5")]({
+"dark magic": ExtResource("3_83h6i"),
+"nature spell": ExtResource("4_d6keq"),
+"splash spell": ExtResource("2_rh0k5")
+})
+metadata/_custom_type_script = "uid://dsk7hwjnpl646"

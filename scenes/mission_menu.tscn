@@ -1,0 +1,120 @@
+[gd_scene load_steps=5 format=3 uid="uid://sarpaio2vsui"]
+
+[ext_resource type="Script" uid="uid://o0x48kur7grs" path="res://scripts/mission_scene.gd" id="1_01qru"]
+[ext_resource type="FontFile" uid="uid://bubkqg1s5webm" path="res://assets/fonts/Aladin-Regular.ttf" id="2_v3nvf"]
+
+[sub_resource type="Gradient" id="Gradient_3imd1"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.553871, 0.375596, 0.710859, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_egi7e"]
+gradient = SubResource("Gradient_3imd1")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_01qru")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_egi7e")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="ItemList" type="ItemList" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_constants/h_separation = 10
+theme_override_fonts/font = ExtResource("2_v3nvf")
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 320)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -36.5
+offset_right = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="separator2" type="Control" parent="MarginContainer/HBoxContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+
+[node name="Mission_title" type="Label" parent="MarginContainer/HBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_v3nvf")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Description" type="Label" parent="MarginContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_v3nvf")
+theme_override_font_sizes/font_size = 14
+text = "Description"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(300, 130)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = ExtResource("2_v3nvf")
+theme_override_font_sizes/normal_font_size = 10
+
+[node name="reward" type="Label" parent="MarginContainer/HBoxContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_v3nvf")
+theme_override_font_sizes/font_size = 14
+text = "Reward:"
+
+[node name="separator" type="Control" parent="MarginContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="draw" from="MarginContainer/HBoxContainer/ItemList" to="." method="_on_item_list_draw"]
+[connection signal="item_selected" from="MarginContainer/HBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]
